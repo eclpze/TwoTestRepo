@@ -1,0 +1,45 @@
+kami1@DESKTOP-5DRM2PU MINGW64 /C/Users/kami1/GitRepo/tmp (master)
+$ git clone https://github.com/eclpze/TwoTestRepo.git second
+Cloning into 'second'...
+remote: Enumerating objects: 3, done.
+remote: Counting objects: 100% (3/3), done.
+remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+Receiving objects: 100% (3/3), done.
+
+kami1@DESKTOP-5DRM2PU MINGW64 /C/Users/kami1/GitRepo/tmp (master)
+$ cd second/
+
+kami1@DESKTOP-5DRM2PU MINGW64 /C/Users/kami1/GitRepo/tmp/second (main)
+$ git remote -v
+origin  https://github.com/eclpze/TwoTestRepo.git (fetch)
+origin  https://github.com/eclpze/TwoTestRepo.git (push)
+
+kami1@DESKTOP-5DRM2PU MINGW64 /C/Users/kami1/GitRepo/tmp/second (main)
+$ echo "Это результат работы в Bash" > result.txt
+
+kami1@DESKTOP-5DRM2PU MINGW64 /C/Users/kami1/GitRepo/tmp/second (main)
+$ git add result.txt
+warning: in the working copy of 'result.txt', LF will be replaced by CRLF the ne
+xt time Git touches it
+
+kami1@DESKTOP-5DRM2PU MINGW64 /C/Users/kami1/GitRepo/tmp/second (main)
+$ git commit -m "Добавлен файл result.txt"
+[main 14edfb8] Добавлен файл result.txt
+ 1 file changed, 1 insertion(+)
+ create mode 100644 result.txt
+
+kami1@DESKTOP-5DRM2PU MINGW64 /C/Users/kami1/GitRepo/tmp/second (main)
+$ git push
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 378 bytes | 378.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+To https://github.com/eclpze/TwoTestRepo.git
+   51e11e0..14edfb8  main -> main
+
+kami1@DESKTOP-5DRM2PU MINGW64 /C/Users/kami1/GitRepo/tmp/second (main)
+$ git log --oneline
+14edfb8 (HEAD -> main, origin/main, origin/HEAD) Добавлен файл result.txt
+51e11e0 Initial commit
